@@ -36,6 +36,7 @@ export default {
   methods: {
     clear() {
       this.current = '';
+      this.operator = null;
     },
     number(value) {
       if(this.operator instanceof Function) {
@@ -80,6 +81,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .calculator {
+  color: white;
   font-size: 40px;
   border: solid 1px gray;
   margin: 0 auto;
@@ -91,13 +93,12 @@ export default {
 .display {
   grid-column: 1 / 5;
   background-color: rgb(52, 63, 63);
-  color: white;
 }
 
 .btn {
   cursor: pointer;
   border: solid 1px rgb(206, 206, 206);
-  background-color: rgb(226, 225, 225);
+  background-color: rgb(80, 80, 80);
 }
 
 .btn:hover {
@@ -107,7 +108,6 @@ export default {
 
 .btn-orange {
   background-color: rgb(255, 177, 32);
-  color: white; 
 }
 
 .zero {
